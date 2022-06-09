@@ -1,19 +1,31 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseLink(license) {
+  if(license === 'GNU_AGPLv3'){
+    return 'https://choosealicense.com/licenses/agpl-3.0/'
+  }else if(license === 'GNU_GPLv3'){
+    return 'https://choosealicense.com/licenses/gpl-3.0/'
+  }else if(license === 'GNU_LGPLv3'){
+    return 'https://choosealicense.com/licenses/lgpl-3.0/'
+  }else if(license === 'Mozilla_Public_License_2.0'){
+    return 'https://choosealicense.com/licenses/mpl-2.0/'
+  }else if(license === 'Apache_License_2.0'){
+    return 'https://choosealicense.com/licenses/apache-2.0/'
+  }else if(license === 'MIT_License'){
+    return 'https://choosealicense.com/licenses/mit/'
+  }else if(license === 'Boost_Software_License_1.0'){
+    return 'https://choosealicense.com/licenses/bsl-1.0/'
+  }else if(license === 'The_Unlicense'){
+    return 'https://choosealicense.com/licenses/unlicense/'
+  }else{
+    return ''
+  }
+}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  licenseLink = renderLicenseLink(data.license)
   return `# ${data.title}
-  ![license](https://img.shields.io/badge/license-${data.license}-green)
+  ![license](https://img.shields.io/badge/license-${data.license}-green)<br>
+  Click [here](${licenseLink}) for license details
+
   ## Description
   
   ${data.description}

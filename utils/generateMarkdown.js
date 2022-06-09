@@ -23,7 +23,7 @@ function renderLicenseLink(license) {
 function generateMarkdown(data) {
   licenseLink = renderLicenseLink(data.license)
   return `# ${data.title}
-  ![license](https://img.shields.io/badge/license-${data.license}-green)<br>
+  ![License](https://img.shields.io/badge/license-${data.license}-green)<br>
   Click [here](${licenseLink}) for license details
 
   ## Description
@@ -34,7 +34,6 @@ function generateMarkdown(data) {
   
   - [Installation](#installation)
   - [Usage](#usage)
-  - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#test)
   - [Questions](#questions)

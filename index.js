@@ -6,7 +6,7 @@ const generateMarkdown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 const questions = ["What is your project's title?", "Please type in a description of your project: ", "Please type out installation instructions: ", "Please type out usage information: ", "Please type out contribution guidlines: ", "Please type out test instructions: ", "What license would you like to use for your project? ", "What is your GitHub username? ", "What is your email address? "];
 const answerName = ['title', 'description', 'installation', 'usage', 'constribution', 'test', 'license', 'username', 'email'];
-const choicesArr = ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'];
+const choicesArr = ['GNU_AGPLv3', 'GNU_GPLv3', 'GNU_LGPLv3', 'Mozilla_Public_License_2.0', 'Apache_License_2.0', 'MIT_License', 'Boost_Software_License_1.0', 'The_Unlicense'];
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
